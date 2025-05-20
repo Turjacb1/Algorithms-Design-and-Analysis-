@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-void greedyCoinChange(int amount) {
+void greedycoinchange(int amount) {
     int coins[] = {25, 10, 5, 1};
     int n = sizeof(coins) / sizeof(coins[0]);
       int c=0;
@@ -17,16 +17,16 @@ void greedyCoinChange(int amount) {
         }
         
     }
-    printf(" Total Count of Coins = %d",c);
+    printf(" total count coins = %d",c);
 }
 
 
 int main() {
     int amount;
-    printf("Enter the amount: ");
+    printf("enter the amount: ");
     scanf("%d", &amount);
 
-    greedyCoinChange(amount);
+    greedycoinchange(amount);
 
     return 0;
 }
