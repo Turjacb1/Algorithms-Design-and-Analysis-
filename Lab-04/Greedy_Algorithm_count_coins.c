@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 
+
 void greedycoinchange(int amount) {
     int coins[] = {25, 10, 5, 1};
     int n = sizeof(coins) / sizeof(coins[0]);

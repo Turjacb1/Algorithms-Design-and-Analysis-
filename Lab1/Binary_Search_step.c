@@ -4,6 +4,8 @@
 int binarySearch(int arr[], int n, int key, int* steps) {
     int low = 0, high = n - 1;
 
+
+
     while (low <= high) {
         (*steps)++; 
         int mid = (low + high) / 2;
@@ -19,7 +21,10 @@ int binarySearch(int arr[], int n, int key, int* steps) {
     return -1; 
 }
 
-void testBinarySearch(int n, int key) {
+
+
+
+void testbinarysearch(int n, int key) {
     int arr[n];
     int steps = 0;
 
@@ -30,21 +35,22 @@ void testBinarySearch(int n, int key) {
 
     int index = binarySearch(arr, n, key, &steps);
 
-    printf("Array size: %d, Search key: %d\n", n, key);
-    if (index != -1)
-        printf("Key found at index %d\n", index);
-    else
-        printf("Key not found.\n");
 
-    printf("Steps taken: %d\n\n", steps);
+    printf("array size: %d, aearch key: %d\n", n, key);
+    if (index != -1)
+    printf("key found index %d\n", index);
+    else
+    printf("key not found.\n");
+
+    printf("steps taken: %d\n\n", steps);
 }
 
 
-//for count worst case
+// worst case
 int main() {
-    testBinarySearch(10, 10);     
-    testBinarySearch(100, 100);   
-    testBinarySearch(1000, 1000); 
+    testbinarysearch(10, 10);     
+    testbinarysearch(100, 100);   
+   testbinarysearch(1000, 1000); 
 
     return 0;
 }
