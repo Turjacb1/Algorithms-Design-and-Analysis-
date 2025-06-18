@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int stepCount = 0; // Global step counter
+
+int stepcount = 0; 
 
 void merge(int arr[], int l, int mid, int r) {
     int n1 = mid - l + 1;
@@ -11,18 +12,18 @@ void merge(int arr[], int l, int mid, int r) {
 
     for (int i = 0; i < n1; i++) {
         a[i] = arr[l + i];
-        stepCount++; // Assignment step
+        stepcount++; 
     }
 
     for (int i = 0; i < n2; i++) {
         b[i] = arr[mid + 1 + i];
-        stepCount++; // Assignment step
+        stepcount++; 
     }
 
     int i = 0, j = 0, k = l;
 
     while (i < n1 && j < n2) {
-        stepCount++; // Comparison
+        stepcount++; 
         if (a[i] <= b[j]) {
             arr[k] = a[i];
             i++;
@@ -31,21 +32,21 @@ void merge(int arr[], int l, int mid, int r) {
             j++;
         }
         k++;
-        stepCount++; // Assignment
+        stepcount++; 
     }
 
     while (i < n1) {
         arr[k] = a[i];
         i++;
         k++;
-        stepCount++; // Assignment
+        stepcount++; 
     }
 
     while (j < n2) {
         arr[k] = b[j];
         j++;
         k++;
-        stepCount++; // Assignment
+        stepcount++; 
     }
 }
 
@@ -59,6 +60,7 @@ void mergesort(int arr[], int l, int r) {
     }
 }
 
+
 int main() {
     int arr[] = {10, 44, 66, 22, 46, 24, 12, 16};
     int size = sizeof(arr) / sizeof(arr[0]);
@@ -70,12 +72,12 @@ int main() {
 
     mergesort(arr, 0, size - 1);
 
-    printf("\n\nSorted array:\n");
+    printf("\n\nsorted array:\n");
     for (int i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
 
-    printf("\n\nTotal steps: %d\n", stepCount);
+    printf("\n\ntotal steps: %d\n", stepcount);
 
     return 0;
 }
