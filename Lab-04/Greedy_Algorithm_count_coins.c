@@ -22,6 +22,7 @@ void greedycoinchange(int amount) {
 }
 
 
+
 int main() {
     int amount;
     printf("enter the amount: ");

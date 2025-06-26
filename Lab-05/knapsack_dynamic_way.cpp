@@ -24,10 +24,10 @@ int knapsack_dp(int W, int wt[], int val[], int n) {
 
 
 int main() {
-    int val[] = {60, 100, 120};
-    int wt[] = {10, 20, 30};
-    int W = 50;
-    int n = 3;
+    int val[] = {12, 10, 20, 15};
+    int wt[] = {2, 1, 3, 2};
+    int W = 5;
+    int n = 4;
     
     cout << "Maximum value (DP): " << knapsack_dp(W, wt, val, n) << endl;
     return 0;
