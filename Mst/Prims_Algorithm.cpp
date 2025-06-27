@@ -39,6 +39,7 @@ void pmst(vector<vector<pair<int, int>>> &adj, int V) {
             int weight = edge.second; 
             
             
+
             if (!visited[v] && weight < key[v]) {
                 key[v] = weight;
                 parent[v] = u;
@@ -78,3 +79,5 @@ int main() {
     
     return 0;
 }
+
+

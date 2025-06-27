@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int coinCollect(vector<vector<int>>& coin) {
+int coincollect(vector<vector<int>>& coin) {
     int n = coin.size(); 
     int m = coin[0].size(); 
     
@@ -46,7 +46,7 @@ int main() {
         }
     }
 
-    int result = coinCollect(coin);
+    int result = coincollect(coin);
     cout << "highest coin value: " << result << endl;
 
     return 0;
