@@ -18,18 +18,18 @@ int main() {
 
     do {
         int total = 0;
-        for (int i = 0; i < 4; i++) {
+        for (int i =0; i <4; i++) {
             total += cost[i][jobs[i]];
         }
 
-        if (total < min_cost) {
+        if (total<min_cost) {
             min_cost = total;
             best_assignment = jobs;
         }
     } while (next_permutation(jobs.begin(), jobs.end()));
 
-    cout << "Minimum Cost: " << min_cost << endl;
-    cout << "Best Assignment:\n";
+    cout << "minimum Cost: " << min_cost << endl;
+    cout << "best Assignment:\n";
     for (int i = 0; i < 4; i++) {
         cout << "Person " << i << " -> Job " << best_assignment[i] << endl;
     }

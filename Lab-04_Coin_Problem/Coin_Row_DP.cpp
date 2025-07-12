@@ -9,7 +9,7 @@ int coinRow(vector<int>& coins) {
     dp[0] = 0; 
     dp[1] = coins[0]; 
 
-    for (int i = 2; i <= n; i++) {
+    for (int i = 2; i <=n; i++) {
         dp[i] = max(dp[i-1], dp[i-2] + coins[i-1]);
     }
 
@@ -23,7 +23,7 @@ int main() {
 
     vector<int> coins(n);
     cout << "the value of coin: ";
-    for (int i = 0; i < n; i++) {
+    for (int i =0; i <n;i++) {
         cin >> coins[i];
     }
 

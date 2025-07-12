@@ -5,7 +5,7 @@ int coincollect(vector<vector<int>>& coin) {
     int n = coin.size(); 
     int m = coin[0].size(); 
     
-    if (n == 0 || m == 0) return 0; 
+    if (n ==0 ||m ==0) return 0; 
 
     
     vector<vector<int>> dp(n, vector<int>(m, 0));
@@ -14,17 +14,17 @@ int coincollect(vector<vector<int>>& coin) {
     dp[0][0] = coin[0][0];
     
    
-    for (int j = 1; j < m; j++) {
+    for (int j =1; j<m; j++) {
         dp[0][j] = dp[0][j-1] + coin[0][j];
     }
     
     
-    for (int i = 1; i < n; i++) {
+    for (int i =1; i <n; i++) {
         dp[i][0] = dp[i-1][0] + coin[i][0];
     }
     
     
-    for (int i = 1; i < n; i++) {
+    for (int i =1; i <n; i++) {
         for (int j = 1; j < m; j++) {
             dp[i][j] = max(dp[i-1][j], dp[i][j-1]) + coin[i][j];
         }

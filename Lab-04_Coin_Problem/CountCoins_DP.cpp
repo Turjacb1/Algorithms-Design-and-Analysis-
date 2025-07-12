@@ -12,9 +12,9 @@ public:
         dp[0] = 1;
         
       
-        for (int coin : coins) {
+        for (int coin :coins) {
         
-            for (int i = coin; i <= amount; i++) {
+            for (int i =coin; i<=amount; i++) {
                 dp[i] += dp[i - coin];
             }
         }
@@ -25,8 +25,8 @@ public:
 
 int main() {
     Solution sol;
-    vector<int> coins = {1, 2, 5};
+    vector<int>coins = {1, 2, 5};
     int amount = 5;
-    cout << "Number of ways: " << sol.change(amount, coins) << endl;
+    cout << "number of ways: " << sol.change(amount,coins) <<endl;
     return 0;
 }

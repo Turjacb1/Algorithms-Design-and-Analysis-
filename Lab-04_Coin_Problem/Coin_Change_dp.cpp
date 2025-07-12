@@ -13,7 +13,7 @@ int coinchange(vector<int>& coins, int amount) {
         
         for (int c : coins) {
             if (c <= i && dp[i - c] != INT_MAX) {
-                dp[i] = min(dp[i], dp[i - c] + 1);
+                dp[i]=min(dp[i],dp[i - c] + 1);
             }
         }
     }
@@ -29,7 +29,7 @@ int main() {
     
     vector<int> coins(n);
     cout << "the value of coin: ";
-    for (int i = 0; i < n; i++) {
+    for (int i =0; i<n; i++) {
         cin >> coins[i];
     }
     

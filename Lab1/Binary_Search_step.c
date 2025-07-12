@@ -29,7 +29,7 @@ void testbinarysearch(int n, int key) {
     int steps = 0;
 
     
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i <n;i++) {
         arr[i] = i + 1;
     }
 

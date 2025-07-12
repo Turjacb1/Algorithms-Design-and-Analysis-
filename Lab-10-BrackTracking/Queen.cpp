@@ -31,6 +31,7 @@ bool safe(vector<vector<int>>& board,int row,int col,int N) {
     return true;
 }
 
+
 bool queen(vector<vector<int>>& board,int row,int N) {
     if (row == N) {
         print(board, N);
