@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void print(vector<vector<int>>& board, intN) {
+void print(vector<vector<int>>& board, int N) {
     for (int i =0;i <N;i++) {
         for (int j =0; j <N; j++) {
             cout << (board[i][j] ? "Q " : ". ");

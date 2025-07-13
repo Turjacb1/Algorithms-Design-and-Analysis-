@@ -5,13 +5,12 @@ using namespace std;
 
 
 
-
 void subsetSum(vector<int>& arr,int index,int target,vector<int>& subset, int currentSum) {
     if (currentSum==target) {
         cout << "{";
         for (int num:subset)
             cout << num << " ";
-        cout << "}" << endl;
+        cout << "}"<<endl;
         return;
     }
 

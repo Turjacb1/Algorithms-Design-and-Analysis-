@@ -5,12 +5,12 @@
 using namespace std;
 
 int main() {
-    int cost[4][4] = {
+    int cost[4][4] = 
+    {
         {9, 2, 7, 8},
         {6, 4, 3, 7},
         {5, 8, 1, 8},
-        {7, 6, 9, 4}
-    };
+        {7, 6, 9, 4} };
 
     vector<int> jobs = {0, 1, 2, 3};
     int min_cost = INT_MAX;
@@ -18,21 +18,21 @@ int main() {
 
     do {
         int total = 0;
-        for (int i =0; i <4; i++) {
+        for (int i=0; i<4; i++) {
             total += cost[i][jobs[i]];
         }
 
         if (total<min_cost) {
             min_cost = total;
-            best_assignment = jobs;
-        }
-    } while (next_permutation(jobs.begin(), jobs.end()));
+            best_assignment = jobs;}} 
+    
+    
+            while (next_permutation(jobs.begin(), jobs.end()));
 
-    cout << "minimum Cost: " << min_cost << endl;
-    cout << "best Assignment:\n";
-    for (int i = 0; i < 4; i++) {
-        cout << "Person " << i << " -> Job " << best_assignment[i] << endl;
-    }
+                cout << "minimum Cost: " << min_cost << endl;
+     cout << "best Assignment:\n";
+    for (int i = 0; i <4; i++) {
+        cout << "Person " << i << " -> Job " << best_assignment[i] << endl;}
 
     return 0;
 }

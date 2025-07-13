@@ -8,14 +8,14 @@ std::vector<int> stringmatch(const std::string& text, const std::string& pattern
     std::vector<int> match;
 
    
-    for (int i = 0; i <= n - m; ++i) {
+    for (int i =0;i<=n-m; ++i) {
         int j = 0;
         
-        while (j < m && text[i + j] == pattern[j]) {
+        while (j <m&&text[i + j]==pattern[j]) {
             ++j;
         }
        
-        if (j == m) {
+        if (j==m) {
             match.push_back(i);
         }
     }
@@ -26,12 +26,12 @@ int main() {
     std::string text = "AABAACAADA";
     std::string pattern = "AA";
     
-    std::vector<int> result = stringmatch(text, pattern);
+    std::vector<int> result=stringmatch(text, pattern);
     
     if (result.empty()) {
-        std::cout << "No matches found." << std::endl;
+        std::cout << "no matches found." << std::endl;
     } else {
-        std::cout << "Pattern found at indices: ";
+        std::cout << "pattern found : ";
         for (int index : result) {
             std::cout << index << " ";
         }
