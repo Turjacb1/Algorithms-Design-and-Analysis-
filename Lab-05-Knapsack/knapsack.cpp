@@ -10,46 +10,46 @@ struct Item {
 
 
 bool compare(Item a, Item b) {
-    return a.ratio > b.ratio;
+    return a.ratio>b.ratio;
 }
 
 
 int main() {
     int n;
-    float capacity, total_value = 0;
+    float capacity, total_value=0;
     
     cin >> n;
     vector<Item> items(n);
 
     // Input value
-    for(int i = 0; i < n; i++) {
+    for(int i=0;i<n;i++) {
         cin >> items[i].value;
     }
 
     
-    for(int i = 0; i < n; i++) {
+    for(int i =0; i<n;i++) {
         cin >> items[i].weight;
         items[i].ratio = items[i].value / items[i].weight;
     }
 
-    cin >> capacity;
+    cin >>capacity;
 
 
-    sort(items.begin(), items.end(), compare);
+    sort(items.begin(),items.end(),compare);
 
-    for(int i = 0; i < n; i++) {
+    for(int i =0;i<n; i++) {
         if(capacity >= items[i].weight) {
-            // Take the whole item
+           
             capacity -= items[i].weight;
             total_value += items[i].value;
         } else {
-            // Take the fraction of the item
-            total_value += items[i].ratio * capacity;
+            
+            total_value +=items[i].ratio*capacity;
             break;
         }
     }
 
-    cout << "Maximum value in knapsack = " << total_value << endl;
+    cout << "maximum ="<<total_value<< endl;
 
     return 0;
 }
